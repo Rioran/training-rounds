@@ -1,6 +1,4 @@
-# rioran-clock
-A simple HTML+JS clock for personal use.
+# training-rounds
+HTML + JS page to track standart 3 min fighting rounds.
 
-Double-click the main.html file to get it running.
-
-As of 2022-01-26 the project is deployed on https://rioran.github.io/rioran-clock/main
+As of 2022-07-02 the project is deployed on [TODO]
