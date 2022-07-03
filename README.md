@@ -1,4 +1,8 @@
 # training-rounds
-HTML + JS page to track standart 3 min fighting rounds.
+Таймер для тренеровок по 3-х минутным раундам с передышками по 1-й минуте.
 
-As of 2022-07-02 the project is deployed on [TODO]
+Клик в начале - запускает таймер.
+
+Клик в любой момент после запуска - ставит тренеровку на паузу или отменяет паузу.
+
+Таймер работает по адресу: https://rioran.github.io/training-rounds/main.html
