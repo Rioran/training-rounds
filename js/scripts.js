@@ -16,6 +16,7 @@ const button_classes = [
     "btn btn-danger w-100 h-100 text-responsive",
     "btn btn-success w-100 h-100 text-responsive",
 ];
+const button_pause_class = "btn btn-secondary w-100 h-100 text-responsive";
 
 var seconds_before_status_change = 5;
 var status_start_dttm;
@@ -80,13 +81,15 @@ function main_button_clicked() {
     if (training_is_going) {
         training_is_going = !training_is_going;
         interval_object = clearInterval(interval_object);
-        seconds_before_status_change = parseInt((status_end_dttm - new Date()) / 1000) + 1
+        seconds_before_status_change = parseInt((status_end_dttm - new Date()) / 1000) + 1;
+        main_button.className = button_pause_class;
         return;
     }
     if (!training_is_going) {
         training_is_going = !training_is_going;
         status_start_dttm = new Date();
         status_end_dttm = new Date(status_start_dttm.getTime() + seconds_before_status_change*1000);
+        main_button.className = button_classes[status_pointer];
         render_loop();
         return;
     }
