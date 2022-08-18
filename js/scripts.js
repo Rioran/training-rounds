@@ -11,6 +11,11 @@ const durations = [
     180,
     55,
 ];
+const sounds = [
+    new Audio("sounds/get-ready.mp3"),
+    new Audio("sounds/fight.mp3"),
+    new Audio("sounds/relax.mp3"),
+]
 const button_classes = [
     "btn btn-warning w-100 h-100 text-responsive",
     "btn btn-danger w-100 h-100 text-responsive",
@@ -49,6 +54,7 @@ function render_time() {
         status_end_dttm = new Date(status_start_dttm.getTime() + seconds_before_status_change*1000);
         support_span.innerText = status_text;
         main_button.className = button_classes[status_pointer];
+        sounds[status_pointer].play();
     }
     if (time < status_end_dttm) {
         const delta = ms_to_text(status_end_dttm - time);
