@@ -81,6 +81,7 @@ function main_button_clicked() {
         status_end_dttm = new Date(status_start_dttm.getTime() + seconds_before_status_change*1000);
         training_is_going = true;
         main_button.className = button_classes[status_pointer];
+        sounds[status_pointer].play();
         render_loop();
         return;
     }
